@@ -1,7 +1,5 @@
 class Game
 
-  #include Countable
-
   WIN_COMBINATIONS = [
    [0, 1, 2],
    [3, 4, 5],
@@ -14,7 +12,6 @@ class Game
   ]
 
 
-  # attr_accessor :board
   attr_reader :player_1, :player_2, :board
 
    def initialize(player_1 = Players::Human.new("X"), player_2 = Players::Human.new("O"), board = Board.new)
