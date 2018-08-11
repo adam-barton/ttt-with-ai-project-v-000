@@ -5,21 +5,22 @@ require_relative '../config/environment'
 
    puts "Welcome to Tic Tac Toe!"
 
-    def start 
+    def start
       puts "Press 1 to play against a computer."
       puts "Press 2 to play against another person."
       puts "Press 3 to watch the computer play against itself."
 
       selection = STDIN.gets.strip
 
-      case selection 
+      case selection
         until selection == "1" || "2" || "3"
             puts "Please enter 1, 2 or 3."
           end
       when "1"
         Game.new(player_1 = Players:: Human.new("X"), player_2 = Players::Computer.new("O"), board = Board.new).play
+        play_again?
       when
-        
+
     end
 
 
@@ -31,7 +32,7 @@ require_relative '../config/environment'
     #     game.play
     #   end
 
-    def play_again 
+    def play_again?
       again = ""
         until again.downcase == "n"
         puts "Would you like to play again? y/n"
