@@ -52,3 +52,4 @@ require_relative '../config/environment'
           puts "Goodbye."
           exit
         end
+      end
