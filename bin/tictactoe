@@ -29,17 +29,22 @@ require_relative '../config/environment'
         game.play_again?
       else
         puts "Please enter 1, 2, or 3"
-
     end
 
+    def play_again?
+      when game.over?
+        puts "Would you like to play again? y/n"
+        again = STDIN.gets.strip
 
-
-   #game.game_type
-
-    # game = Game.new
-    #   until game.over?
-    #     game.play
-    #   end
+        case again
+        when "y"
+          start
+        when "n"
+          puts "Goodbye."
+          exit
+        end
+      end
+    end
 
   end
 start
