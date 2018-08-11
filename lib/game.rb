@@ -89,19 +89,4 @@ class Game
     end
   end
 
-  def play_again?
-    if game.over?
-      puts "Would you like to play again? y/n"
-      again = STDIN.gets.strip
-
-      case again
-      when "y"
-        start
-      when "n"
-        puts "Goodbye."
-        exit
-      end
-    end
-  end
-
 end
