@@ -13,14 +13,21 @@ require_relative '../config/environment'
       selection = STDIN.gets.strip
 
       case selection
-        until selection == "1" || "2" || "3"
-            puts "Please enter 1, 2 or 3."
-          end
-      when "1"
-        Game.new(player_1 = Players:: Human.new("X"), player_2 = Players::Computer.new("O"), board = Board.new).play
-        play_again?
-      when
 
+      when "1"
+        game = Game.new(player_1 = Players:: Human.new("X"), player_2 = Players::Computer.new("O"), board = Board.new)
+        game.play
+        play_again?
+      when "2"
+        game = Game.new 
+        game.play
+        play_again?
+      when "3"
+        no_players = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"), board = Board.new)
+        no_plyers.play
+        play_again?
+      else 
+        puts "Please enter 1, 2, or 3"
     end
 
 
