@@ -41,7 +41,7 @@ require_relative '../config/environment'
     #     game.play
     #   end
 
-    
+
 
     def play_again?
       if game.over?
@@ -57,4 +57,5 @@ require_relative '../config/environment'
         end
       end
     end
+  end
 start
