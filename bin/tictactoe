@@ -32,7 +32,7 @@ require_relative '../config/environment'
     end
 
     def play_again?
-      when game.over?
+      game.over?
         puts "Would you like to play again? y/n"
         again = STDIN.gets.strip
 
