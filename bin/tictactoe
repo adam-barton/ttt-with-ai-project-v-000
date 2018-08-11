@@ -45,10 +45,10 @@ require_relative '../config/environment'
         puts "Would you like to play again? y/n"
         again = STDIN.gets.strip
 
-        case again 
+        case again
         when "y"
           start
         when "n"
           puts "Goodbye."
-          exit 
+          exit
         end

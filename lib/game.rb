@@ -20,16 +20,6 @@ class Game
      @board = board
   end
 
-  def one_player_game
-    one_player = Game.new(player_1 = Players:: Human.new("X"), player_2 = Players::Computer.new("O"), board = Board.new)
-    one_player.play
-  end
-
-  def no_player_game
-    no_players = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"), board = Board.new)
-    no_plyers.play
-  end
-
   def player_1=(player_1)
     @player_1 = player_1
   end
@@ -99,20 +89,18 @@ class Game
     end
   end
 
-  def game_type
-    selection = STDIN.gets.strip
-    until selection == "1" || "2" || "3"
-      puts "Please enter 1, 2 or 3."
-    end
-      case selection
-      when "1"
-        one_player_game
-      when "2"
-        game_1 = Game.new
-        game_1.play
-      when "3"
-        no_player_game
-    end
-  end
+  # def game_type
+  #   
+  #   
+  #     case selection
+  #     when "1"
+  #       one_player_game
+  #     when "2"
+  #       game_1 = Game.new
+  #       game_1.play
+  #     when "3"
+  #       no_player_game
+  #   end
+  # end
 
 end
