@@ -89,18 +89,5 @@ class Game
     end
   end
 
-  # def game_type
-  #   
-  #   
-  #     case selection
-  #     when "1"
-  #       one_player_game
-  #     when "2"
-  #       game_1 = Game.new
-  #       game_1.play
-  #     when "3"
-  #       no_player_game
-  #   end
-  # end
 
 end
